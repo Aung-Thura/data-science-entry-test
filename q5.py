@@ -1,14 +1,18 @@
 def check_divisibility(num, divisor):
     """
-    Task 1
-    - Create a function to check if the number (num) is divisible by another number (divisor).
-    - Both num and divisor must be numeric.
-    - Return True if num is divisible by divisor, False otherwise.
+    Task 1:
+    Checks if num is divisible by divisor using the modulo operator.
     """
-    return
+    # Validate that both inputs are numeric
+    if not (isinstance(num, (int, float)) and isinstance(divisor, (int, float))):
+        return "Both inputs must be numeric."
+    
+    # Check divisibility (remainder is 0)
+    return num % divisor == 0
 
+# Task 2: Invocation Scenarios
+scenario_1 = check_divisibility(6, 2)
+scenario_2 = check_divisibility(7, 3)
 
-# Task 2
-# Invoke the function "check_divisibility" using the following scenarios:
-# - 10, 2
-# - 7, 3
+print(scenario_1)  # Output: True
+print(scenario_2)  # Output: False
