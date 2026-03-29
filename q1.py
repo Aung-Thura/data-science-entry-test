@@ -1,5 +1,5 @@
 def swap(x, y):
-    def swap(x, y):
+    
     # Check if both x and y are numeric (int or float)
     if not (isinstance(x, (int, float)) and isinstance(y, (int, float))):
         return "-1"
