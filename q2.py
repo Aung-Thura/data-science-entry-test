@@ -1,14 +1,21 @@
 def find_and_replace(lst, find_val, replace_val):
     """
-    Task 1
-    - Create a function that searches for all occurrences of a value (find_val) in a given list (lst) and replaces them with another value (replace_val).
-    - lst must be a list.
-    - Return the modified list.
+    Task 1:
+    Replaces all occurrences of find_val with replace_val in the given list.
     """
-    return
+    if not isinstance(lst, list):
+        return "Input must be a list."
 
+    for i in range(len(lst)):
+        if lst[i] == find_val:
+            lst[i] = replace_val
+            
+    return lst
+    
+    
+    
+scenario_1 = find_and_replace([1, 2, 3, 4, 2, 2], 2, 5)
+scenario_2 = find_and_replace(["apple", "banana", "apple"], "apple", "orange")
 
-# Task 2
-# Invoke the function "find_and_replace" using the following scenarios:
-# - [1, 2, 3, 4, 2, 2], 2, 5
-# - ["apple", "banana", "apple"], "apple", "orange"
+print(scenario_1)  # Output: [1, 5, 3, 4, 5, 5]
+print(scenario_2)  # Output: ['orange', 'banana', 'orange']
