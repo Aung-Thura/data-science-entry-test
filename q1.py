@@ -1,15 +1,19 @@
 def swap(x, y):
-    """
-    Task 1
-    - Create a function that would swap the value of x and y using only x and y as variables.
-    - x and y must be numeric.
-    - Return -1 if x and y is not numeric, and
-    - print the swapped values if both x and y are numeric.
-    """
+    def swap(x, y):
+    # Check if both x and y are numeric (int or float)
+    if not (isinstance(x, (int, float)) and isinstance(y, (int, float))):
+        return "-1"
+    
+    # Swapping logic using addition and subtraction
+    # No temporary variable is used
+    x = x + y  # x now holds the sum of both
+    y = x - y  # y becomes the original value of x
+    x = x - y  # x becomes the original value of y
+    
+    print(f"Swapped values: x = {x}, y = {y}")
+    
+
     return
+swap(1, 5)
 
 
-# Task 2
-# Invoke the function "swap" using the following scenarios:
-# - "Apple", 10
-# - 9, 17
