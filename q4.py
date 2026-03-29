@@ -1,14 +1,16 @@
 def string_reverse(s):
     """
-    Task 1
-    - Create a function that reverses a given string (s).
-    - s must be a string.
-    - Return the reversed string.
+    Task 1:
+    Reverses the given string s using slicing.
     """
-    return
+    if not isinstance(s, str):
+        return "Input must be a string."
+    
+    return s[::-1]
 
+# Task 2: Invocation Scenarios
+scenario_1 = string_reverse(1)
+scenario_2 = string_reverse("Python")
 
-# Task 2
-# Invoke the function "string_reverse" using the following scenarios:
-# - "Hello World"
-# - "Python"
+print(scenario_1)  # Output: dlroW olleH
+print(scenario_2)  # Output: nohtyP
